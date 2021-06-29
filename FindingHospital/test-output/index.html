@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\sauvi\AppData\Local\Temp\testng-eclipse-1901990767\testng-customsuite.xml</span>
+                    <span>C:\Users\sauvi\AppData\Local\Temp\testng-eclipse--937260044\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -133,10 +133,11 @@
                   <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=91.0.4472.124)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-8D6GBA0&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.11&apos;
+System info: host: &apos;DESKTOP-8D6GBA0&apos;, ip: &apos;192.168.119.159&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\sauvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:14755}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5512facfb013d13cdff6d1bf3f6537a3
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\sauvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:14060}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c5090719779528db2fc3c3a4ae90b24f
+*** Element info: {Using=xpath, value=//ul[@class=&apos;u-br-rule u-marginb--std-half u-pointer u-padb--dbl o-flex o-flex__justify--between&apos;]/li}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -147,13 +148,12 @@ Session ID: 5512facfb013d13cdff6d1bf3f6537a3
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
-	at org.openqa.selenium.support.ui.ExpectedConditions$28.apply(ExpectedConditions.java:806)
-	at org.openqa.selenium.support.ui.ExpectedConditions$28.apply(ExpectedConditions.java:802)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at pageClasses.corporateWellnessPage.submitForm(corporateWellnessPage.java:36)
-	at testCases.correctTestCase.submitForm(correctTestCase.java:29)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)
+	at pageClasses.diagnosticsPage.majorCitiesSelection(diagnosticsPage.java:28)
+	at testCases.correctTestCase.submitForm(correctTestCase.java:28)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -191,7 +191,7 @@ Session ID: 5512facfb013d13cdff6d1bf3f6537a3
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\sauvi\AppData\Local\Temp\testng-eclipse-1901990767\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\sauvi\AppData\Local\Temp\testng-eclipse--937260044\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -244,12 +244,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'submitForm')
 data.setCell(0, 2, 'testCases.correctTestCase')
-data.setCell(0, 3, 88616);
+data.setCell(0, 3, 31765);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -284,7 +284,7 @@ return data;
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">flushReport</span>
-                <span class="method-start">88621 ms</span>
+                <span class="method-start">31772 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
