@@ -64,15 +64,5 @@ public class corporateWellnessPage extends pageBaseClass{
 			driver.switchTo().frame(2);
 		}
 		
-		
-//		if(wait.until(ExpectedConditions.alertIsPresent())!=null) {
-//			System.out.println("****************************Alert********************************");
-//			System.out.println(driver.switchTo().alert().getText());
-//			reportFail(driver.switchTo().alert().getText());
-//		}
-//		else {
-//			reportPass("Form Submitted");
-//		}
-		
 	}
 }
