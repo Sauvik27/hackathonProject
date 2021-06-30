@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-30T02:32:13 IST" name="Surefire suite" finished-at="2021-06-30T02:35:11 IST" duration-ms="178217">
+  <suite started-at="2021-06-30T10:12:52 IST" name="Surefire suite" finished-at="2021-06-30T10:14:44 IST" duration-ms="112075">
     <groups>
     </groups>
-    <test started-at="2021-06-30T02:32:13 IST" name="Surefire test" finished-at="2021-06-30T02:35:11 IST" duration-ms="178217">
+    <test started-at="2021-06-30T10:12:52 IST" name="Surefire test" finished-at="2021-06-30T10:14:44 IST" duration-ms="112075">
       <class name="testCases.phoneWrongTestCase">
-        <test-method signature="submitForm()[pri:0, instance:testCases.phoneWrongTestCase@59505b48]" started-at="2021-06-30T02:35:00 IST" name="submitForm" finished-at="2021-06-30T02:35:11 IST" duration-ms="10627" status="FAIL">
+        <test-method signature="submitForm()[pri:0, instance:testCases.phoneWrongTestCase@59505b48]" started-at="2021-06-30T10:14:40 IST" name="submitForm" finished-at="2021-06-30T10:14:44 IST" duration-ms="3411" status="FAIL">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[chrome not reachable
+              <![CDATA[unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
   (Session info: chrome=91.0.4472.124)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-8D6GBA0', ip: '192.168.119.159', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+System info: host: 'DESKTOP-8D6GBA0', ip: '192.168.43.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\sauvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:6989}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 11fe6c6818e6f430582ca5428d0fefae
-*** Element info: {Using=xpath, value=//*[@id='c-omni-container']/div/div[1]/div[1]/input}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\sauvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:14908}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f0455be57e3da8c950ce1bcbe7c8021]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
   (Session info: chrome=91.0.4472.124)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-8D6GBA0', ip: '192.168.119.159', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+System info: host: 'DESKTOP-8D6GBA0', ip: '192.168.43.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\sauvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:6989}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 11fe6c6818e6f430582ca5428d0fefae
-*** Element info: {Using=xpath, value=//*[@id='c-omni-container']/div/div[1]/div[1]/input}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\sauvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:14908}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f0455be57e3da8c950ce1bcbe7c8021
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -38,12 +38,9 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at pageClasses.homePage.seachHospitals(homePage.java:25)
-at testCases.phoneWrongTestCase.submitForm(phoneWrongTestCase.java:26)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+at baseClass.pageBaseClass.OpenApplication(pageBaseClass.java:69)
+at testCases.phoneWrongTestCase.submitForm(phoneWrongTestCase.java:25)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -83,31 +80,31 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitForm -->
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:testCases.phoneWrongTestCase@59505b48]" started-at="2021-06-30T02:35:11 IST" name="flushReport" finished-at="2021-06-30T02:35:11 IST" duration-ms="388" status="PASS">
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:testCases.phoneWrongTestCase@59505b48]" started-at="2021-06-30T10:14:44 IST" name="flushReport" finished-at="2021-06-30T10:14:44 IST" duration-ms="180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
       </class> <!-- testCases.phoneWrongTestCase -->
       <class name="testCases.correctTestCase">
-        <test-method signature="submitForm()[pri:0, instance:testCases.correctTestCase@6392827e]" started-at="2021-06-30T02:32:13 IST" name="submitForm" finished-at="2021-06-30T02:33:31 IST" duration-ms="78110" status="FAIL">
+        <test-method signature="submitForm()[pri:0, instance:testCases.correctTestCase@6392827e]" started-at="2021-06-30T10:12:52 IST" name="submitForm" finished-at="2021-06-30T10:14:36 IST" duration-ms="103843" status="FAIL">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[chrome not reachable
   (Session info: chrome=91.0.4472.124)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-8D6GBA0', ip: '192.168.119.159', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+System info: host: 'DESKTOP-8D6GBA0', ip: '192.168.43.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\sauvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:13863}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0bb6203ac16c133be29c55f25cf34fe8]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\sauvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:10536}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ed8cda602bb1448ef2389efaf76d49a]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=91.0.4472.124)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-8D6GBA0', ip: '192.168.119.159', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+System info: host: 'DESKTOP-8D6GBA0', ip: '192.168.43.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\sauvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:13863}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0bb6203ac16c133be29c55f25cf34fe8
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\sauvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:10536}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ed8cda602bb1448ef2389efaf76d49a
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -164,31 +161,33 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitForm -->
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:testCases.correctTestCase@6392827e]" started-at="2021-06-30T02:33:31 IST" name="flushReport" finished-at="2021-06-30T02:33:31 IST" duration-ms="254" status="PASS">
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:testCases.correctTestCase@6392827e]" started-at="2021-06-30T10:14:36 IST" name="flushReport" finished-at="2021-06-30T10:14:36 IST" duration-ms="442" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
       </class> <!-- testCases.correctTestCase -->
       <class name="testCases.emailWrongTestCase">
-        <test-method signature="submitForm()[pri:0, instance:testCases.emailWrongTestCase@29215f06]" started-at="2021-06-30T02:33:31 IST" name="submitForm" finished-at="2021-06-30T02:35:00 IST" duration-ms="88249" status="FAIL">
+        <test-method signature="submitForm()[pri:0, instance:testCases.emailWrongTestCase@29215f06]" started-at="2021-06-30T10:14:36 IST" name="submitForm" finished-at="2021-06-30T10:14:40 IST" duration-ms="3903" status="FAIL">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[chrome not reachable
+              <![CDATA[unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
   (Session info: chrome=91.0.4472.124)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-8D6GBA0', ip: '192.168.119.159', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+System info: host: 'DESKTOP-8D6GBA0', ip: '192.168.43.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\sauvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:10807}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 06e628fee55a9f211136ae93a4466ac2]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\sauvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:8578}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e42f8bc43b35099f8267d6c77c6c3532]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
   (Session info: chrome=91.0.4472.124)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-8D6GBA0', ip: '192.168.119.159', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+System info: host: 'DESKTOP-8D6GBA0', ip: '192.168.43.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\sauvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:10807}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 06e628fee55a9f211136ae93a4466ac2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\sauvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:8578}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e42f8bc43b35099f8267d6c77c6c3532
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -199,13 +198,9 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
-at org.openqa.selenium.support.ui.ExpectedConditions$28.apply(ExpectedConditions.java:806)
-at org.openqa.selenium.support.ui.ExpectedConditions$28.apply(ExpectedConditions.java:802)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-at pageClasses.corporateWellnessPage.submitForm(corporateWellnessPage.java:36)
-at testCases.emailWrongTestCase.submitForm(emailWrongTestCase.java:28)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+at baseClass.pageBaseClass.OpenApplication(pageBaseClass.java:69)
+at testCases.emailWrongTestCase.submitForm(emailWrongTestCase.java:24)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -245,7 +240,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitForm -->
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:testCases.emailWrongTestCase@29215f06]" started-at="2021-06-30T02:35:00 IST" name="flushReport" finished-at="2021-06-30T02:35:00 IST" duration-ms="538" status="PASS">
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:testCases.emailWrongTestCase@29215f06]" started-at="2021-06-30T10:14:40 IST" name="flushReport" finished-at="2021-06-30T10:14:40 IST" duration-ms="191" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
