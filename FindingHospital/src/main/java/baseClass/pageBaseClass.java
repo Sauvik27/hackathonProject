@@ -84,7 +84,6 @@ public class pageBaseClass {
 	public void reportFail(String reportString) {
 		logger.log(Status.FAIL, reportString);
 		screenshot();
-		Assert.fail(reportString);
 	}
 
 	public void reportPass(String reportString) {
