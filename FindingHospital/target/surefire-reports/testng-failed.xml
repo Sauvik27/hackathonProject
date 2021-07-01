@@ -12,12 +12,10 @@
       <class name="testCases.phoneWrongTestCase">
         <methods>
           <include name="submitForm"/>
-          <include name="flushReport"/>
         </methods>
       </class> <!-- testCases.phoneWrongTestCase -->
       <class name="testCases.emailWrongTestCase">
         <methods>
-          <include name="flushReport"/>
           <include name="submitForm"/>
         </methods>
       </class> <!-- testCases.emailWrongTestCase -->

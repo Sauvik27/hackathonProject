@@ -11,32 +11,32 @@ import baseClass.pageBaseClass;
 public class corporateWellnessPage extends pageBaseClass{
 	
 	public WebDriver driver;
-	
 	//Constructor
 	public corporateWellnessPage(WebDriver driver) {
 		this.driver = driver;
+		
 	}
 	
 
 	
-	public void submitForm() {
+	public void submitForm(String name, String organizationName, String email, String phone, String size) {
 		
-		driver.findElement(By.id(prop.getProperty("name_id"))).sendKeys("Ram");
-		driver.findElement(By.id(prop.getProperty("organisation_id"))).sendKeys("Cognizant");
-		driver.findElement(By.id(prop.getProperty("email_id"))).sendKeys("1234@gmail.com");
-		driver.findElement(By.id(prop.getProperty("phone_id"))).sendKeys("98745632101");
+		driver.findElement(By.id(prop.getProperty("name_id"))).sendKeys(name);
+		driver.findElement(By.id(prop.getProperty("organisation_id"))).sendKeys(organizationName);
+		driver.findElement(By.id(prop.getProperty("email_id"))).sendKeys(email);
+		driver.findElement(By.id(prop.getProperty("phone_id"))).sendKeys(phone);
 		
 		Select select = new Select(driver.findElement(By.id(prop.getProperty("size_id"))));
-		select.selectByVisibleText("5001-10000");
+		select.selectByVisibleText(size);
 		
 		reportPass("Form filled");
 		
 		
 		driver.findElement(By.xpath(prop.getProperty("submit_xpath"))).click();
 		
-		//Switching iframe
+		//Switching i-frame
 		driver.switchTo().frame(2);
-		System.out.println("frame changed");
+		
 		//Explicit wait of 1 second
 		WebDriverWait wait = new WebDriverWait(driver, 1);
 		while(true) {
@@ -57,12 +57,12 @@ public class corporateWellnessPage extends pageBaseClass{
 			driver.switchTo().defaultContent();
 			if(driver.findElement(By.id("thankyou-section")).isDisplayed()) {
 				reportPass("Form Submitted");
-				System.out.println("Test Passed");
+				System.out.println("Test Case Passed");
 				break;
 			}
 			//switch to iframe
 			driver.switchTo().frame(2);
 		}
-		
+		driver.close();
 	}
 }

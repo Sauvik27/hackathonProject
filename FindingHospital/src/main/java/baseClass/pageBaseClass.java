@@ -11,7 +11,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -25,7 +24,7 @@ public class pageBaseClass {
 	
 	public WebDriver driver;
 	public static Properties prop;
-	public ExtentReports report = ExtentReportManager.getReportInstance();
+	public static ExtentReports report = ExtentReportManager.getReportInstance();
 	public static ExtentTest logger;
 
 	/*********** Invoke Browser 
@@ -94,9 +93,5 @@ public class pageBaseClass {
 
 	}
 	
-	@AfterMethod
-	public void flushReport() {
-		report.flush();
-		//driver.close();
-	}
+	
 }
