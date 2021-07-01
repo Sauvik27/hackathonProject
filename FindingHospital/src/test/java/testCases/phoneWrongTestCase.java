@@ -22,7 +22,7 @@ public class phoneWrongTestCase extends pageBaseClass{
 	diagnosticsPage diagnosticsPage;
 	corporateWellnessPage corporateWellnessPage;
 	
-	@Test(/*dependsOnGroups = "testEmail"*/)
+	@Test(dependsOnGroups = "testEmail")
 	public void submitForm() throws IOException {
 		//Took data from Excel sheet using Apache POI
 				File src = new File(System.getProperty("user.dir") + "\\Excel\\data.xlsx");
