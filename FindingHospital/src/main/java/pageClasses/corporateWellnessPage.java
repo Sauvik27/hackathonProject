@@ -71,7 +71,7 @@ public class corporateWellnessPage extends pageBaseClass{
 			//switch to i-frame
 			driver.switchTo().frame(2);
 		}
-		//Close driver
-		driver.close();
+		//Quit driver
+		driver.quit();
 	}
 }
