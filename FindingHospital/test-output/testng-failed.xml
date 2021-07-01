@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.correctTestCase">
+      <class name="testCases.emailWrongTestCase">
         <methods>
           <include name="submitForm"/>
-          <include name="flushReport"/>
         </methods>
-      </class> <!-- testCases.correctTestCase -->
+      </class> <!-- testCases.emailWrongTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

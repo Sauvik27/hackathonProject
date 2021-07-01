@@ -7,7 +7,6 @@ import java.io.IOException;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import baseClass.pageBaseClass;
@@ -55,13 +54,4 @@ public class correctTestCase extends pageBaseClass{
 		corporateWellnessPage = diagnosticsPage.majorCitiesSelection();
 		corporateWellnessPage.submitForm(name, organizationName, email, phone, size);
 	}
-	
-	@Test
-	
-	@AfterMethod
-	public void flushReport() {
-		report.flush();
-	}
-	
-	
 }

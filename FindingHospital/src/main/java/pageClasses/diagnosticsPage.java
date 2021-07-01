@@ -1,5 +1,6 @@
 package pageClasses;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,8 +22,9 @@ public class diagnosticsPage extends pageBaseClass{
 	}
 	
 	
-	public corporateWellnessPage majorCitiesSelection() {
+	public corporateWellnessPage majorCitiesSelection() throws IOException {
 		
+		//Fetching all major cities in list
 		List<WebElement> topCitiesElements;
 		try {
 			topCitiesElements = driver.findElements(By.xpath(prop.getProperty("majoyCityList_xpath")));
@@ -30,9 +32,13 @@ public class diagnosticsPage extends pageBaseClass{
 			topCitiesElements = driver.findElements(By.xpath(prop.getProperty("majoyCityList_xpath")));
 		}
 		
+		//ScreenShot
+		screenshot("MajorCities.png",driver);
+		
 		String[] topCitiesNameList = new String[topCitiesElements.size()];
 		
-		System.out.println("**********************Top cities List***************************");
+		//Printing Major city names
+		System.out.println("**********************major cities List***************************");
 		for(int j=1;j<=topCitiesElements.size();j++) {
 			topCitiesNameList[j-1] = driver.findElement(By.xpath(prop.getProperty("majorCityNames_xpath1")+j+prop.getProperty("majorCityNames_xpath2"))).getText();
 			System.out.println(topCitiesNameList[j-1]);
@@ -51,7 +57,7 @@ public class diagnosticsPage extends pageBaseClass{
 			// TODO: handle exception
 			driver.findElement(By.xpath(prop.getProperty("forProviders_xpath"))).click();
 		}
-		
+		screenshot("ForProviders.png",driver);
 		try {
 			driver.findElement(By.xpath(prop.getProperty("corporateClick_xpath"))).click();
 		} catch (org.openqa.selenium.StaleElementReferenceException ex) {

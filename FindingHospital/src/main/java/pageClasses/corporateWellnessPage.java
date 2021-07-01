@@ -1,5 +1,7 @@
 package pageClasses;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,8 +21,9 @@ public class corporateWellnessPage extends pageBaseClass{
 	
 
 	
-	public void submitForm(String name, String organizationName, String email, String phone, String size) {
+	public void submitForm(String name, String organizationName, String email, String phone, String size) throws IOException {
 		
+		//Entering data in form
 		driver.findElement(By.id(prop.getProperty("name_id"))).sendKeys(name);
 		driver.findElement(By.id(prop.getProperty("organisation_id"))).sendKeys(organizationName);
 		driver.findElement(By.id(prop.getProperty("email_id"))).sendKeys(email);
@@ -29,6 +32,8 @@ public class corporateWellnessPage extends pageBaseClass{
 		Select select = new Select(driver.findElement(By.id(prop.getProperty("size_id"))));
 		select.selectByVisibleText(size);
 		
+		//ScreenShot and Extent Report
+		screenshot("FormFilled.png",driver);
 		reportPass("Form filled");
 		
 		
@@ -39,6 +44,8 @@ public class corporateWellnessPage extends pageBaseClass{
 		
 		//Explicit wait of 1 second
 		WebDriverWait wait = new WebDriverWait(driver, 1);
+		
+		//Using this while loop because there is "Image CAPTCHA" in webSite which we have to Solve manually
 		while(true) {
 			//Handling alert
 			try {
@@ -57,12 +64,14 @@ public class corporateWellnessPage extends pageBaseClass{
 			driver.switchTo().defaultContent();
 			if(driver.findElement(By.id("thankyou-section")).isDisplayed()) {
 				reportPass("Form Submitted");
+				screenshot("ThankYouPage.png",driver);
 				System.out.println("Test Case Passed");
 				break;
 			}
-			//switch to iframe
+			//switch to i-frame
 			driver.switchTo().frame(2);
 		}
+		//Close driver
 		driver.close();
 	}
 }

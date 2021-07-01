@@ -1,5 +1,6 @@
 package pageClasses;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -18,7 +19,9 @@ public class searchPage extends pageBaseClass {
 	}
 
 	
-	public diagnosticsPage hosptialFilters() {
+	public diagnosticsPage hosptialFilters() throws IOException {
+		
+		//Checking every filters on the webpage
 		driver.findElement(By.xpath(prop.getProperty("accreditedCheckbox_xpath"))).click();
 
 		try {
@@ -40,6 +43,8 @@ public class searchPage extends pageBaseClass {
 			driver.findElement(By.xpath(prop.getProperty("Has_Parking_checkbox_xpath"))).click();
 		}
 		
+		//ScreenShot and Extent Report
+		screenshot("FiltersSeleted.png",driver);
 		reportPass("Every Filters Executed");
 		
 		/****************************Printing All Hospitals having rating > 3.5**************************/
@@ -83,6 +88,7 @@ public class searchPage extends pageBaseClass {
 		}
 		reportPass("All Hospitals having rating > 3.5 printed on console");
 		
+		//Click the diagnostics Button
 		try {
 			driver.findElement(By.xpath(prop.getProperty("diagnosticsButton_xpath"))).click();
 		} catch (org.openqa.selenium.StaleElementReferenceException ex) {
@@ -90,6 +96,7 @@ public class searchPage extends pageBaseClass {
 			driver.findElement(By.xpath(prop.getProperty("diagnosticsButton_xpath"))).click();
 		}
 		
+		//Extent report submission
 		reportPass("Diagnostics Page Executed");
 		return PageFactory.initElements(driver, diagnosticsPage.class);
 	}

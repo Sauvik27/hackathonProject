@@ -1,16 +1,21 @@
 package baseClass;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -64,8 +69,9 @@ public class pageBaseClass {
 	}
 	
 
-	public homePage OpenApplication() {
+	public homePage OpenApplication() throws IOException {
 			driver.get(prop.getProperty("websiteURL"));
+			screenshot("HomePage.png",driver);
 			reportPass("Website is opened Successfully");
 			return PageFactory.initElements(driver, homePage.class);
 	}
@@ -82,16 +88,19 @@ public class pageBaseClass {
 	/******************** Reporting Functions ******************/
 	public void reportFail(String reportString) {
 		logger.log(Status.FAIL, reportString);
-		screenshot();
 	}
 
 	public void reportPass(String reportString) {
 		logger.log(Status.PASS, reportString);
 	}
 
-	public void screenshot() {
-
+	public void screenshot(String SSname, WebDriver driver) throws IOException {
+		File SSfileName = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(SSfileName, new File(System.getProperty("user.dir") + "\\screenshots\\" + SSname));
 	}
 	
-	
+	@AfterMethod
+	public void flushReport() {
+		report.flush();
+	}
 }
