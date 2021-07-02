@@ -7,6 +7,7 @@ import java.io.IOException;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import baseClass.pageBaseClass;
@@ -22,8 +23,9 @@ public class phoneWrongTestCase extends pageBaseClass{
 	diagnosticsPage diagnosticsPage;
 	corporateWellnessPage corporateWellnessPage;
 	
+	@Parameters("browser")
 	@Test(dependsOnGroups = "testEmail")
-	public void submitForm() throws IOException {
+	public void submitForm(String browser) throws IOException {
 		//Took data from Excel sheet using Apache POI
 				File src = new File(System.getProperty("user.dir") + "\\Excel\\data.xlsx");
 				FileInputStream fis = new FileInputStream(src);

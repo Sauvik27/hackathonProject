@@ -7,6 +7,7 @@ import java.io.IOException;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import baseClass.pageBaseClass;
@@ -21,8 +22,9 @@ public class emailWrongTestCase extends pageBaseClass{
 	diagnosticsPage diagnosticsPage;
 	corporateWellnessPage corporateWellnessPage;
 	
+	@Parameters("browser")
 	@Test(dependsOnGroups = "testOne", groups = "testEmail")
-	public void submitForm() throws IOException {
+	public void submitForm(String browser) throws IOException {
 		//Took data from Excel sheet using Apache Poi
 				File src = new File(System.getProperty("user.dir") + "\\Excel\\data.xlsx");
 				FileInputStream fis = new FileInputStream(src);
@@ -46,7 +48,7 @@ public class emailWrongTestCase extends pageBaseClass{
 				//Extent report initialization
 				logger = report.createTest("Search for hospitals Test 2");
 				pageBaseClass pageBaseClass = new pageBaseClass();
-				pageBaseClass.invokeBrowser("chrome");
+				pageBaseClass.invokeBrowser(browser);
 				homePage = pageBaseClass.OpenApplication();
 				searchPage = homePage.seachHospitals();
 				diagnosticsPage = searchPage.hosptialFilters();

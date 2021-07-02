@@ -4,15 +4,19 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -27,7 +31,8 @@ import pageClasses.homePage;
 
 public class pageBaseClass {
 	
-	public WebDriver driver;
+	public RemoteWebDriver driver;
+//	public WebDriver driver;
 	public static Properties prop;
 	public static ExtentReports report = ExtentReportManager.getReportInstance();
 	public static ExtentTest logger;
@@ -38,13 +43,22 @@ public class pageBaseClass {
 
 		try {
 			if (BrowserName.equalsIgnoreCase("chrome")) {
-				System.setProperty("webdriver.chrome.driver",
-						System.getProperty("user.dir") + "\\drivers\\chromedriver.exe");
-				driver = new ChromeDriver();
+				
+//				System.setProperty("webdriver.chrome.driver",
+//						System.getProperty("user.dir") + "\\drivers\\chromedriver.exe");
+//				driver = new ChromeDriver();
+				
+				ChromeOptions cap = new ChromeOptions();
+				cap.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
+				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap);
+				
 			} else {
-				System.setProperty("webdriver.firefox.driver",
-						System.getProperty("user.dir") + "\\drivers\\geckodriver.exe");
-				driver = new FirefoxDriver();
+//				System.setProperty("webdriver.firefox.driver",
+//						System.getProperty("user.dir") + "\\drivers\\geckodriver.exe");
+//				driver = new FirefoxDriver();
+				
+				DesiredCapabilities cap = DesiredCapabilities.firefox();
+				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap);
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
