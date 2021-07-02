@@ -6,7 +6,7 @@
     <classes>
       <class name="testCases.correctTestCase">
         <methods>
-          <include name="submitForm" invocation-numbers="0"/>
+          <include name="submitForm"/>
           <include name="flushReport"/>
         </methods>
       </class> <!-- testCases.correctTestCase -->
@@ -19,7 +19,7 @@
       <class name="testCases.emailWrongTestCase">
         <methods>
           <include name="flushReport"/>
-          <include name="submitForm"/>
+          <include name="submitForm" invocation-numbers="0"/>
         </methods>
       </class> <!-- testCases.emailWrongTestCase -->
     </classes>
